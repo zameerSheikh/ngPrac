@@ -1,0 +1,28 @@
+<div class="form-wrapper">
+    <form class="form-signin" (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+        <h1 class="h3 mb-3 font-weight-normal text-white">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input
+         type="email"
+         id="inputEmail"
+         class="form-control"
+         placeholder="Email address"
+         name="email"
+         ngModel
+         required>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input
+         type="password"
+          id="inputPassword"
+          class="form-control"
+          placeholder="Password"
+          name="pwd"
+          ngModel
+          required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="text-danger" *ngIf="errorMsg !== ''">{{errorMsg}}</p>
+      </form>
+</div>
+
+
+  
